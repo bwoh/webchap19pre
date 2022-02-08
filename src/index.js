@@ -6,6 +6,8 @@ const __dirname = path.resolve();
 const app = express();
 const port = 3000;
 
+app.use("/images", express.static("images"));
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
